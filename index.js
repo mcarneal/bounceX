@@ -3,4 +3,9 @@ const scrollTo = () => {
 }
 
 
-
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() > $(document).height() *.90  ) {
+       $(window).unbind('scroll');
+       alert("near bottom!");
+   }
+});
